@@ -1,0 +1,600 @@
+@-moz-document url("https://anilist.co/home"), url("https://anilist.co/notifications"), regexp("https://anilist.co/settings[\\s\\S]*"), regexp("https://anilist.co/forum[\\s\\S]*"), regexp("https://anilist.co/activity[\\s\\S]*"), regexp("https://anilist.co/anime[\\s\\S]*"), regexp("https://anilist.co/manga[\\s\\S]*"), regexp("https://anilist.co/search[\\s\\S]*") {
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+    
+    .site-theme-dark,
+    *,
+    :root {
+        --background-image: url("https://media4.giphy.com/media/NzSUEgbTWB7TW/giphy.gif?cid=790b7611ec8f32a27c78dcb7e8300e9b30cd0b4149bd87e7&rid=giphy.gif");
+        /*     --background-image: url("https://i.imgur.com/GqDdsed.png"); */
+        --scrollbar-bg-color: #1f232d42;
+    
+        /* Site background color transparency */
+        /*     --color-foreground: 16, 24, 35, 0.75; */
+        /* Primary Color */
+        /*     --color-blue: 131, 255, 249;
+        --color-blue-dim: 104, 204, 199; */
+        --grad1: #35BBCA;
+        --grad2: #0191B4;
+        --grad3: #B298DC;
+        --grad4: #FE7A15;
+        --grad5: #A663CC;
+        --grad6: #D3DD18;
+    }
+    
+    /* Background image */
+    body {
+        /* With Dark Overlay */
+        /*     background: linear-gradient(rgb(var(--color-background), 0.5), rgb(var(--color-background), 0.5)), rgb(var(--color-background)) var(--background-image) center/100% fixed !important; */
+        background: linear-gradient(rgb(var(--color-background), 0.5), rgb(var(--color-background), 0.5)), rgb(var(--color-background)) var(--background-image) !important;
+        /* Without Dark Overlay */
+        /*     background: rgb(var(--color-background)) var(--background-image) center/100% fixed !important; */
+        /*     background-repeat: no-repeat !important; */
+        /*     background-size: 100% auto !important; */
+    }
+    
+    /* Transparent banner - use together with background image */
+    /* .banner {
+        background-image: none !important;
+        background-color: rgba(var(--color-background), 0) !important;
+    }
+    .banner .shadow {
+        background: none !important;
+    } */
+    /*Footer background transparency*/
+    .footer {
+        background: rgba(var(--color-foreground)) !important;
+    }
+    
+    /* Scrollbar */
+    /* Firefox Scrollbar*/
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: rgb(var(--color-blue)) var(--scrollbar-bg-color);
+    }
+    /* Chrome Scrollbar */
+    ::-webkit-scrollbar {
+        width: 5px;
+        background: #0000;
+    }
+    ::-webkit-scrollbar-corner {
+        background: var(--scrollbar-bg-color);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgb(var(--color-blue));
+        -webkit-border-radius: 1ex;
+    }
+    
+    /* Content Scrollbar */
+    .markdown::-webkit-scrollbar,
+    .about .content-wrapr::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Hides hoh download button */
+    /* .hohDownload {
+        display: none;
+    } */
+    /* Display all status posts in full regardless of their length */
+    .activity-text .text .markdown {
+        max-height: unset;
+    }
+    
+    /* Milestone */
+    .footer[data-v-815ccddc] {
+        display: none;
+    }
+    
+    /* Activity Reply Icon */
+    .replies > .count {
+        color: #F2952F;
+    }
+    .replies > *:nth-child(2) {
+        color: #F2952F;
+    }
+    
+    /* Bottom Space */
+    /* .page-content {
+        padding-bottom: 100vh;
+    }
+     */
+    /* Stats Wrap */
+    .list-stats > .stats-wrap .stat .value {
+        font-size: 2rem;
+        font-weight: 700;
+        padding-bottom: 8px;
+    }
+    
+    /* - - - Nav Items - - - */
+    .header-wrap .nav-wrap .link:nth-child(1) {
+        color: var(--grad1);
+    }
+    .header-wrap .nav-wrap .link:nth-child(1):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f015";
+        color: var(--grad1);
+    }
+    .header-wrap .nav-wrap .link:nth-child(2) {
+        color: var(--grad2);
+    }
+    .header-wrap .nav-wrap .link:nth-child(2):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f144";
+        color: var(--grad2);
+    }
+    .header-wrap .nav-wrap .link:nth-child(3) {
+        color: var(--grad3);
+    }
+    .header-wrap .nav-wrap .link:nth-child(3):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f02d";
+        color: var(--grad3);
+    }
+    .header-wrap .nav-wrap .link:nth-child(4) {
+        color: var(--grad4);
+    }
+    .header-wrap .nav-wrap .link:nth-child(4):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f004";
+        color: var(--grad4);
+    }
+    .header-wrap .nav-wrap .link:nth-child(5) {
+        color: var(--grad5);
+    }
+    .header-wrap .nav-wrap .link:nth-child(5):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f200";
+        color: var(--grad5);
+    }
+    .header-wrap .nav-wrap .link:nth-child(6) {
+        color: var(--grad6);
+    }
+    .header-wrap .nav-wrap .link:nth-child(6):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f0c0";
+        color: var(--grad6);
+    }
+    .header-wrap .nav-wrap .link:nth-child(7) {
+        display: none
+    }
+    .header-wrap .nav-wrap .link:nth-child(8) {
+        display: none
+    }
+    
+    .like-wrap:hover .fa-heart {
+        animation: pulse 1s ease-in infinite;
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+    
+        10% {
+            transform: scale(1.1);
+        }
+    
+        20% {
+            transform: scale(0.9);
+        }
+    
+        30% {
+            transform: scale(1.2);
+        }
+    
+        40% {
+            transform: scale(0.9);
+        }
+    
+        50% {
+            transform: scale(1.05);
+        }
+    
+        60% {
+            transform: scale(0.95);
+        }
+    
+        70% {
+            transform: scale(1);
+        }
+    }
+    
+    /* -------------------- ********** -------------------- */
+    /* -------------------- Playground -------------------- */
+    /* -------------------- ********** -------------------- */
+    /* -------------------- ********** -------------------- */
+    /* -------------------- ********** -------------------- */
+    /* ------------------------ Stylus ------------------------ */
+    /* -------------------- Other Sections -------------------- */
+    /*╔═════════════════╗
+             SEARCH
+      ╚═════════════════╝*/
+    .search[data-v-9a20c1b0] {
+        background: rgba(var(--color-foreground));
+    }
+    
+    /*╔═════════════════╗
+          BreakPoints
+      ╚═════════════════╝*/
+    @media (min-width: 760px) {
+        .nav-wrap {
+            border-radius: 10px !important;
+            top: 220px;
+            left: 510px
+        }
+    
+        .stats-wrap {
+            grid-gap: 20px;
+        }
+    }
+    @media (min-width: 1040px) {}
+    @media (min-width: 1360px) {}
+    @media (min-width: 1540px) {}
+    @media (min-width: 1540px) {
+        .nav-wrap {
+            border-radius: 15px !important;
+            top: 270px;
+            left: 650px;
+        }
+    }
+    }
+    
+    @-moz-document regexp("https://anilist.co/user/[\\s\\S]*") {
+    /* Display all status posts in full regardless of their length */
+    .activity-text .text .markdown {
+        max-height: unset;
+    }
+    }
+    
+    @-moz-document regexp("https://anilist.co/settings[\\s\\S]*") {
+    .page-content .content {
+        margin: 0px;
+    }
+    }
+    
+    @-moz-document url("DUMMY - Profile"), regexp("https://anilist.co/user/SleepyOwl/[\\s\\S]*") {
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+    
+    /*╔═════════════════════════════════════════════════╗
+        Global CSS
+      ╚═════════════════════════════════════════════════╝*/
+    
+    :root {
+      --background-image: url("https://media4.giphy.com/media/NzSUEgbTWB7TW/giphy.gif?cid=790b7611ec8f32a27c78dcb7e8300e9b30cd0b4149bd87e7&rid=giphy.gif");
+    
+      --color-blue: 179, 104, 230;
+      --color-blue-dim: 173, 141, 219;
+    }
+    
+    /* Scrollbar */
+    *,
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: rgb(var(--color-blue)) transparent;
+    }
+    
+    /* Body background image */
+    body {
+      /* With Dark Overlay */
+      /*     background: linear-gradient(rgb(var(--color-background), 0.5), rgb(var(--color-background), 0.5)), rgb(var(--color-background)) var(--background-image) center/100% fixed !important; */
+      /* Without Dark Overlay */
+      /*     background: rgb(var(--color-background)) var(--background-image) center/100% fixed !important; */
+      background: linear-gradient(
+          rgb(var(--color-background), 0.5),
+          rgb(var(--color-background), 0.5)
+        ),
+        rgb(var(--color-background)) var(--background-image) !important;
+    }
+    
+    /* Hides hoh download button */
+    .hohDownload {
+      display: none;
+    }
+    
+    /*╔═════════════════════════════════════════════════╗
+        Status [Anime & Manga counts]
+      ╚═════════════════════════════════════════════════╝*/
+    
+    /* Stats Wrap */
+    .list-stats > .stats-wrap .stat .value {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    
+    /*╔═════════════════════════════════════════════════╗
+        Activities [Posts & Others]
+      ╚═════════════════════════════════════════════════╝*/
+    
+    /* Display all status posts in full regardless of their length */
+    .activity-text .text .markdown {
+      max-height: unset;
+    }
+    
+    /* Activity Reply Icon */
+    .replies > .count {
+      color: #f2952f;
+    }
+    .replies > *:nth-child(2) {
+      color: #f2952f;
+    }
+    
+    /*╔═════════════════════════════════════════════════╗
+          BreakPoints
+      ╚═════════════════════════════════════════════════╝*/
+    @media (min-width: 760px) {
+    }
+    @media (min-width: 1040px) {
+    }
+    @media (min-width: 1360px) {
+    }
+    @media (min-width: 1540px) {
+    }
+    @media (min-width: 1540px) {
+    }
+    
+    }
+    
+    @-moz-document url("DUMMY - Full Site") {
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+    
+    .site-theme-dark,
+    *,
+    :root {
+        --background-image: url("https://i.imgur.com/xRt8F0y.png");
+        /*     --background-image: url("https://i.imgur.com/GqDdsed.png"); */
+        --scrollbar-bg-color: #1f232d42;
+    
+        /* Site background color transparency */
+        --color-foreground: 16, 24, 35, 0.75;
+    
+        /* Primary Color */
+        --color-blue: 78, 189, 178;
+        --color-blue-dim: 68, 179, 158;
+    
+        --grad1: #35BBCA;
+        --grad2: #0191B4;
+        --grad3: #B298DC;
+        --grad4: #FE7A15;
+        --grad5: #A663CC;
+        --grad6: #D3DD18;
+    }
+    
+    /* Background image */
+    body {
+        /* With Dark Overlay */
+        /*     background: linear-gradient(rgb(var(--color-background), 0.5), rgb(var(--color-background), 0.5)), rgb(var(--color-background)) var(--background-image) center/100% fixed !important; */
+        /* Without Dark Overlay */
+        background: rgb(var(--color-background)) var(--background-image) center/100% fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: 100% auto !important;
+    }
+    
+    /* Transparent banner - use together with background image */
+    /* .banner {
+        background-image: none !important;
+        background-color: rgba(var(--color-background), 0) !important;
+    }
+    .banner .shadow {
+        background: none !important;
+    } */
+    /*Footer background transparency*/
+    .footer {
+        background: rgba(var(--color-foreground)) !important;
+    }
+    
+    /* Scrollbar */
+    /* Firefox Scrollbar*/
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: rgb(var(--color-blue)) var(--scrollbar-bg-color);
+    }
+    /* Chrome Scrollbar */
+    ::-webkit-scrollbar {
+        width: 5px;
+        background: #0000;
+    }
+    ::-webkit-scrollbar-corner {
+        background: var(--scrollbar-bg-color);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgb(var(--color-blue));
+        -webkit-border-radius: 1ex;
+    }
+    
+    /* Content Scrollbar */
+    .markdown::-webkit-scrollbar,
+    .about .content-wrapr::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Hides hoh download button */
+    .hohDownload {
+        display: none;
+    }
+    
+    /* Display all status posts in full regardless of their length */
+    .activity-text .text .markdown {
+        max-height: unset;
+    }
+    
+    /* Milestone */
+    .footer[data-v-815ccddc] {
+        display: none;
+    }
+    
+    /* Activity Reply Icon */
+    .replies > .count {
+        color: #F2952F;
+    }
+    .replies > *:nth-child(2) {
+        color: #F2952F;
+    }
+    
+    /* Bottom Space */
+    /* .page-content {
+        padding-bottom: 100vh;
+    } */
+    /* Stats Wrap */
+    .list-stats > .stats-wrap .stat .value:nth-child(1) {
+        font-size: 3rem;
+        font-weight: 700;
+        padding-bottom: 8px;
+        transition: 0.7s ease-in-out;
+    }
+    /*Mean Score*/
+    .list-stats > .stats-wrap .stat:nth-child(3) {
+        display: none;
+    }
+    
+    /* Re-aligns profile picture and name. */
+    img.avatar,
+    h1.name {
+        margin: auto;
+    }
+    .banner-content {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.3s;
+        width: auto !important;
+        background-color: rgb(var(--color-foreground));
+        padding: 10px;
+        border-radius: 15px !important;
+        margin: 0;
+        flex-direction: row;
+        margin-top: 80px;
+        margin-bottom: 10px
+    }
+    
+    /* Nav */
+    .nav-wrap {
+        background: rgb(var(--color-foreground)) !important;
+        width: 51% !important;
+        margin: 0 auto !important;
+        border-radius: 15px !important;
+        position: absolute;
+        top: 270px;
+        left: 650px;
+    }
+    
+    /* - - - Nav Items - - - */
+    .header-wrap .nav-wrap .link:nth-child(1) {
+        color: var(--grad1);
+    }
+    .header-wrap .nav-wrap .link:nth-child(1):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f015";
+        color: var(--grad1);
+    }
+    .header-wrap .nav-wrap .link:nth-child(2) {
+        color: var(--grad2);
+    }
+    .header-wrap .nav-wrap .link:nth-child(2):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f144";
+        color: var(--grad2);
+    }
+    .header-wrap .nav-wrap .link:nth-child(3) {
+        color: var(--grad3);
+    }
+    .header-wrap .nav-wrap .link:nth-child(3):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f02d";
+        color: var(--grad3);
+    }
+    .header-wrap .nav-wrap .link:nth-child(4) {
+        color: var(--grad4);
+    }
+    .header-wrap .nav-wrap .link:nth-child(4):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f004";
+        color: var(--grad4);
+    }
+    .header-wrap .nav-wrap .link:nth-child(5) {
+        color: var(--grad5);
+    }
+    .header-wrap .nav-wrap .link:nth-child(5):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f200";
+        color: var(--grad5);
+    }
+    .header-wrap .nav-wrap .link:nth-child(6) {
+        color: var(--grad6);
+    }
+    .header-wrap .nav-wrap .link:nth-child(6):before {
+        font-family: FontAwesome;
+        font-size: 15px;
+        content: "\f0c0";
+        color: var(--grad6);
+    }
+    .header-wrap .nav-wrap .link:nth-child(7) {
+        display: none
+    }
+    .header-wrap .nav-wrap .link:nth-child(8) {
+        display: none
+    }
+    
+    /* Cat Animetion */
+    .nav-wrap:after {
+        content: '';
+        background-image: url("https://i.imgur.com/1R7dQSN.gif");
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -98px;
+    }
+    
+    /* -------------------- ********** -------------------- */
+    /* -------------------- Playground -------------------- */
+    /* -------------------- ********** -------------------- */
+    /* -------------------- ********** -------------------- */
+    /* -------------------- ********** -------------------- */
+    /* ------------------------ Stylus ------------------------ */
+    /* -------------------- Other Sections -------------------- */
+    /*╔═════════════════╗
+             SEARCH
+      ╚═════════════════╝*/
+    .search[data-v-9a20c1b0] {
+        background: rgba(var(--color-foreground));
+    }
+    
+    /*╔═════════════════╗
+          BreakPoints
+      ╚═════════════════╝*/
+    @media (min-width: 760px) {
+        .nav-wrap {
+            border-radius: 10px !important;
+            top: 220px;
+            left: 510px
+        }
+    
+        .stats-wrap {
+            grid-gap: 20px;
+        }
+        .list-stats > .stats-wrap .stat:nth-child(3) {
+            display: block;
+        }
+    }
+    @media (min-width: 1040px) {}
+    @media (min-width: 1360px) {}
+    @media (min-width: 1540px) {}
+    @media (min-width: 1540px) {
+        .nav-wrap {
+            border-radius: 15px !important;
+            top: 270px;
+            left: 650px;
+        }
+        .list-stats > .stats-wrap .stat:nth-child(3) {
+            display: none;
+        }
+    }
+    }

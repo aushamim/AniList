@@ -1,0 +1,78 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/*╔═════════════════════════════════════════════════╗
+    Global CSS
+  ╚═════════════════════════════════════════════════╝*/
+
+:root {
+  --background-image: url("https://media4.giphy.com/media/NzSUEgbTWB7TW/giphy.gif?cid=790b7611ec8f32a27c78dcb7e8300e9b30cd0b4149bd87e7&rid=giphy.gif");
+
+  --color-blue: 179, 104, 230;
+  --color-blue-dim: 173, 141, 219;
+}
+
+/* Scrollbar */
+*,
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--color-blue)) transparent;
+}
+
+/* Body background image */
+body {
+  /* With Dark Overlay */
+  /*     background: linear-gradient(rgb(var(--color-background), 0.5), rgb(var(--color-background), 0.5)), rgb(var(--color-background)) var(--background-image) center/100% fixed !important; */
+  /* Without Dark Overlay */
+  /*     background: rgb(var(--color-background)) var(--background-image) center/100% fixed !important; */
+  background: linear-gradient(
+      rgb(var(--color-background), 0.5),
+      rgb(var(--color-background), 0.5)
+    ),
+    rgb(var(--color-background)) var(--background-image) !important;
+}
+
+/* Hides hoh download button */
+.hohDownload {
+  display: none;
+}
+
+/*╔═════════════════════════════════════════════════╗
+    Status [Anime & Manga counts]
+  ╚═════════════════════════════════════════════════╝*/
+
+/* Stats Wrap */
+.list-stats > .stats-wrap .stat .value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/*╔═════════════════════════════════════════════════╗
+    Activities [Posts & Others]
+  ╚═════════════════════════════════════════════════╝*/
+
+/* Display all status posts in full regardless of their length */
+.activity-text .text .markdown {
+  max-height: unset;
+}
+
+/* Activity Reply Icon */
+.replies > .count {
+  color: #f2952f;
+}
+.replies > *:nth-child(2) {
+  color: #f2952f;
+}
+
+/*╔═════════════════╗
+      BreakPoints
+  ╚═════════════════╝*/
+@media (min-width: 760px) {
+}
+@media (min-width: 1040px) {
+}
+@media (min-width: 1360px) {
+}
+@media (min-width: 1540px) {
+}
+@media (min-width: 1540px) {
+}
