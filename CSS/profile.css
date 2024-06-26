@@ -1,21 +1,18 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 /*╔═════════════════════════════════════════════════╗
-    Global CSS
+    Main Page
   ╚═════════════════════════════════════════════════╝*/
 
 :root {
   --background-image: url("https://media4.giphy.com/media/NzSUEgbTWB7TW/giphy.gif?cid=790b7611ec8f32a27c78dcb7e8300e9b30cd0b4149bd87e7&rid=giphy.gif");
-
-  --color-blue: 179, 104, 230;
-  --color-blue-dim: 173, 141, 219;
 }
 
 /* Scrollbar */
 *,
 html {
   scrollbar-width: thin;
-  scrollbar-color: rgb(var(--color-blue)) transparent;
+  scrollbar-color: rgb(179, 104, 230) transparent;
 }
 
 /* Body background image */
@@ -36,6 +33,7 @@ body {
   display: none;
 }
 
+/*╔═══════════════ Overview Page ═══════════════════╗*/
 /*╔═════════════════════════════════════════════════╗
     Status [Anime & Manga counts]
   ╚═════════════════════════════════════════════════╝*/
@@ -63,9 +61,58 @@ body {
   color: #f2952f;
 }
 
-/*╔═════════════════╗
+.like-wrap:hover .fa-heart {
+  animation: heartBeat 1s ease-in infinite;
+}
+
+/* Grid layout after banner and nav */
+@media (min-width: 1540px) {
+  .user .overview {
+    grid-template-columns: calc(40% - 40px) 60% !important;
+  }
+}
+
+/*╔═════════════════════════════════════════════════╗
+    Animations
+  ╚═════════════════════════════════════════════════╝*/
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.1);
+  }
+
+  20% {
+    transform: scale(0.9);
+  }
+
+  30% {
+    transform: scale(1.2);
+  }
+
+  40% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+/*╔═════════════════════════════════════════════════╗
       BreakPoints
-  ╚═════════════════╝*/
+  ╚═════════════════════════════════════════════════╝*/
 @media (min-width: 760px) {
 }
 @media (min-width: 1040px) {
@@ -74,5 +121,7 @@ body {
 }
 @media (min-width: 1540px) {
 }
-@media (min-width: 1540px) {
-}
+
+/*╔═════════════════════════════════════════════════╗
+    Playground
+  ╚═════════════════════════════════════════════════╝*/
