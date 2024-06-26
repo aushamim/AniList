@@ -6,11 +6,13 @@
 
 :root {
   --background-image: url("https://media4.giphy.com/media/NzSUEgbTWB7TW/giphy.gif?cid=790b7611ec8f32a27c78dcb7e8300e9b30cd0b4149bd87e7&rid=giphy.gif");
+  --transition-speed: 0.7s;
 }
 
 /* Scrollbar */
-*,
-html {
+html,
+activity-text,
+activity-message {
   scrollbar-width: thin;
   scrollbar-color: rgb(179, 104, 230) transparent;
 }
@@ -61,6 +63,7 @@ body {
   color: #f2952f;
 }
 
+/* Like hover animation */
 .like-wrap:hover .fa-heart {
   animation: heartBeat 1s ease-in infinite;
 }
@@ -70,6 +73,24 @@ body {
   .user .overview {
     grid-template-columns: calc(40% - 40px) 60% !important;
   }
+}
+
+/* Activity effects */
+.activity-anime_list .wrap .status,
+.activity-manga_list .wrap .status,
+.activity-anime_list .wrap .cover,
+.activity-manga_list .wrap .cover {
+  transition: var(--transition-speed);
+}
+.activity-anime_list .wrap:hover .cover,
+.activity-manga_list .wrap:hover .cover {
+  transform: translatex(-50px);
+  transition: var(--transition-speed);
+}
+.activity-anime_list .wrap:hover .status,
+.activity-manga_list .wrap:hover .status {
+  margin-left: -50px;
+  transition: var(--transition-speed);
 }
 
 /*╔═════════════════════════════════════════════════╗
