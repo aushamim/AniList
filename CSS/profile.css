@@ -68,13 +68,6 @@ body {
   animation: heartBeat 1s ease-in infinite;
 }
 
-/* Grid layout after banner and nav */
-@media (min-width: 1540px) {
-  .user .overview {
-    grid-template-columns: calc(40% - 40px) 60% !important;
-  }
-}
-
 /* Activity background effects */
 body.site-theme-dark .activity-anime_list .wrap .status,
 body.site-theme-dark .activity-manga_list .wrap .status {
