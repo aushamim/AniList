@@ -1,0 +1,202 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/*╔═════════════════════════════════════════════════╗
+    Main Page
+  ╚═════════════════════════════════════════════════╝*/
+
+:root {
+  --background-image: url("https://media4.giphy.com/media/NzSUEgbTWB7TW/giphy.gif?cid=790b7611ec8f32a27c78dcb7e8300e9b30cd0b4149bd87e7&rid=giphy.gif");
+  --transition-speed: 0.7s;
+}
+
+/* Scrollbar */
+html,
+activity-text,
+activity-message {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(179, 104, 230) transparent;
+}
+
+/* Body background image */
+body {
+  /* With Dark Overlay */
+  /*     background: linear-gradient(rgb(var(--color-background), 0.5), rgb(var(--color-background), 0.5)), rgb(var(--color-background)) var(--background-image) center/100% fixed !important; */
+  /* Without Dark Overlay */
+  /*     background: rgb(var(--color-background)) var(--background-image) center/100% fixed !important; */
+  background: linear-gradient(
+      rgb(var(--color-background), 0.5),
+      rgb(var(--color-background), 0.5)
+    ),
+    rgb(var(--color-background)) var(--background-image) !important;
+}
+
+/*╔═══════════════ Home Page ═══════════════════╗*/
+/*╔═════════════════════════════════════════════════╗
+    Activities [Posts & Others]
+  ╚═════════════════════════════════════════════════╝*/
+
+/* Display all status posts in full regardless of their length */
+.activity-text .text .markdown {
+  max-height: unset;
+}
+
+/* Activity Reply Icon */
+.replies > .count {
+  color: #f2952f;
+}
+.replies > *:nth-child(2) {
+  color: #f2952f;
+}
+
+/* Like hover animation */
+.like-wrap:hover .fa-heart {
+  animation: heartBeat 1s ease-in infinite;
+}
+
+/* Activity background effects */
+.activity-anime_list .wrap .status,
+.activity-manga_list .wrap .status {
+  text-shadow: 0px 0px 4px rgba(21, 31, 46, 1);
+  transition: var(--transition-speed);
+}
+
+.activity-anime_list .wrap .cover,
+.activity-manga_list .wrap .cover {
+  box-shadow: 0px 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-speed);
+  border-radius: 4px;
+}
+
+.activity-anime_list .wrap,
+.activity-manga_list .wrap {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(21, 31, 46, 0.5) 12%,
+    rgba(21, 31, 46, 1) 150px,
+    rgba(21, 31, 46, 1) 100%
+  );
+}
+
+.activity-anime_list .wrap .cover::after,
+.activity-manga_list .wrap .cover::after {
+  content: "";
+  display: block;
+  background: inherit;
+  position: absolute;
+  width: 100px;
+  top: -50px;
+  bottom: -50px;
+  left: 60px;
+  z-index: -1;
+  filter: blur(1.5px);
+  transition: var(--transition-speed);
+}
+
+.activity-anime_list .wrap:hover .cover::after,
+.activity-manga_list .wrap:hover .cover::after {
+  scale: 1.5;
+  filter: blur(3px);
+  transition: var(--transition-speed);
+}
+
+/* Activity top left dropdown */
+.activity-anime_list .el-dropdown:hover .fa-angle-down,
+.activity-manga_list .el-dropdown:hover .fa-angle-down {
+  animation: bounce 1s ease-in infinite;
+}
+
+/* Subscribe/Unsubscribe button */
+.activity-entry .action:hover .fa-bell {
+  animation: swing 1s ease-in;
+  scale: 1.2;
+  transition: 0.3s;
+}
+
+/*╔═════════════════════════════════════════════════╗
+    Animations
+  ╚═════════════════════════════════════════════════╝*/
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.1);
+  }
+
+  20% {
+    transform: scale(0.9);
+  }
+
+  30% {
+    transform: scale(1.2);
+  }
+
+  40% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*╔═════════════════════════════════════════════════╗
+      BreakPoints
+  ╚═════════════════════════════════════════════════╝*/
+@media (min-width: 760px) {
+}
+@media (min-width: 1040px) {
+}
+@media (min-width: 1360px) {
+}
+@media (min-width: 1540px) {
+}
+
+/*╔═════════════════════════════════════════════════╗
+    Playground
+  ╚═════════════════════════════════════════════════╝*/
