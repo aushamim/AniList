@@ -52,7 +52,7 @@ body {
 
 /* Display all status posts in full regardless of their length */
 .activity-text .text .markdown {
-  max-height: unset;
+  max-height: unset !important;
 }
 
 /* Activity Reply Icon */
@@ -161,6 +161,66 @@ body.site-theme-dark .activity-manga_list .wrap {
   animation: swing 1s ease-in;
   scale: 1.2;
   transition: 0.3s;
+}
+
+/* 720p layout */
+@media (min-width: 1040px) and (max-width: 1540px) {
+  /* bigger space */
+  .user > .container {
+    padding-inline: 0 !important;
+    max-width: 1240px !important;
+  }
+
+  /* Activity History, Genres, Status padding */
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .genres {
+    padding-inline: 5px !important;
+  }
+
+  /* overview grid */
+  .user .overview {
+    grid-template-columns: 420px auto !important;
+    grid-column-gap: 40px;
+  }
+  .overview .section > .stats-wrap {
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* activity list 2 column */
+  .activity-feed {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .activity-message,
+  .activity-text {
+    grid-column: span 2;
+  }
+
+  /* favourites images size fix */
+  .overview .favourites > .favourites-wrap {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 75px);
+    grid-template-rows: repeat(auto-fill, 105px);
+  }
+  .overview .favourites > .favourites-wrap .favourite {
+    width: 100%;
+    height: 105px;
+  }
+
+  /* studio font and image fix */
+  .overview .favourite.studio {
+    min-height: 105px;
+    font-size: 12px;
+  }
+  .overview .favourite.studio::after {
+    margin-left: 0;
+    width: 100%;
+    background-size: cover;
+  }
 }
 
 /*╔═════════════════════════════════════════════════╗

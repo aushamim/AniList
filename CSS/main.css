@@ -30,7 +30,7 @@ body {
     rgb(var(--color-background)) var(--background-image) !important;
 }
 
-/*╔═══════════════ Home Page ═══════════════════╗*/
+/*╔═══════════════════ Home Page ═══════════════════╗*/
 /*╔═════════════════════════════════════════════════╗
     Activities [Posts & Others]
   ╚═════════════════════════════════════════════════╝*/
@@ -72,8 +72,8 @@ body {
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(21, 31, 46, 0.5) 12%,
-    rgba(21, 31, 46, 1) 150px,
+    rgba(21, 31, 46, 0.5) 10%,
+    rgba(21, 31, 46, 1) 120px,
     rgba(21, 31, 46, 1) 100%
   );
 }
@@ -111,6 +111,65 @@ body {
   animation: swing 1s ease-in;
   scale: 1.2;
   transition: 0.3s;
+}
+
+/*╔═══════════════ Notification Page ═══════════════╗
+  ╚═════════════════════════════════════════════════╝*/
+.hohNotification:not(.hohCombined) {
+  min-height: 80px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(21, 31, 46, 0.5) 9%,
+    rgba(21, 31, 46, 1) 100px,
+    rgba(21, 31, 46, 1) 100%
+  );
+  overflow: hidden;
+}
+
+.hohNotification .hohUserImage[href^="https://anilist.co/anime/"],
+.hohNotification .hohUserImage[href^="https://anilist.co/manga/"]
+{
+  border-radius: 4px;
+  height: 80px !important;
+  width: 60px !important;
+  box-shadow: 10px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hohNotification .hohUserImage[href^="https://anilist.co/anime/"]::after,
+.hohNotification .hohUserImage[href^="https://anilist.co/manga/"]::after
+{
+  content: "";
+  display: block;
+  background: inherit;
+  background-size: cover;
+  background-position: right;
+  position: absolute;
+  width: 70px;
+  top: -10px;
+  bottom: -10px;
+  left: 40px;
+  z-index: -1;
+  filter: blur(1.5px);
+  transition: var(--transition-speed);
+}
+
+.hohNotification:hover .hohUserImage[href^="https://anilist.co/anime/"]::after,
+.hohNotification:hover .hohUserImage[href^="https://anilist.co/manga/"]::after
+{
+  scale: 1.5;
+  filter: blur(2px);
+  transition: var(--transition-speed);
+}
+
+.hohNotification .hohMessageText {
+  text-shadow: 0px 0px 4px rgba(21, 31, 46, 1);
+}
+
+/*╔══════════════════ Browse Page ══════════════════╗
+  ╚═════════════════════════════════════════════════╝*/
+.page-content .search {
+  background: unset;
 }
 
 /*╔═════════════════════════════════════════════════╗
@@ -183,18 +242,6 @@ body {
   100% {
     transform: rotate(0deg);
   }
-}
-
-/*╔═════════════════════════════════════════════════╗
-      BreakPoints
-  ╚═════════════════════════════════════════════════╝*/
-@media (min-width: 760px) {
-}
-@media (min-width: 1040px) {
-}
-@media (min-width: 1360px) {
-}
-@media (min-width: 1540px) {
 }
 
 /*╔═════════════════════════════════════════════════╗
