@@ -169,9 +169,16 @@ body.site-theme-dark .activity-manga_list .wrap {
   transition: 3s;
 }
 
-.history-day:hover {
+body.site-theme-dark .history-day:hover {
   scale: 1.5;
   outline-color: #e9d5ff;
+  border-radius: 0 !important;
+  transition: 0s;
+}
+
+.history-day:hover {
+  scale: 1.5;
+  outline-color: #8b5cf6;
   border-radius: 0 !important;
   transition: 0s;
 }
@@ -182,22 +189,30 @@ body.site-theme-dark .activity-manga_list .wrap {
 }
 
 .favourites-wrap .favourite:hover {
-  outline: 1.5px solid black;
+  outline: 1.5px solid white;
   transition: 0s;
+}
+
+body.site-theme-dark .favourites-wrap .favourite:hover {
+  outline: 1.5px solid black;
 }
 
 .favourites-wrap .favourite::before {
   content: "";
-  background: #d287fa;
+  background: #8b5cf6;
   position: absolute;
-  bottom: -4px;
-  left: -4px;
+  bottom: -5px;
+  left: -5px;
   width: 0px;
   height: 0px;
   z-index: -1;
   border-radius: 4px;
   transform-origin: bottom left;
   transition: var(--transition-speed);
+}
+
+body.site-theme-dark .favourites-wrap .favourite::before {
+  background: #d287fa;
 }
 
 .favourites-wrap .favourite:hover::before {
