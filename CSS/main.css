@@ -14,7 +14,6 @@ html,
 activity-text,
 activity-message {
   scrollbar-width: thin;
-  scrollbar-color: rgb(179, 104, 230) transparent;
 }
 
 /* Body background image */
@@ -72,8 +71,8 @@ body {
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(21, 31, 46, 0.5) 10%,
-    rgba(21, 31, 46, 1) 120px,
+    rgba(21, 31, 46, 0.5) 12%,
+    rgba(21, 31, 46, 1) 150px,
     rgba(21, 31, 46, 1) 100%
   );
 }
@@ -120,8 +119,8 @@ body {
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(21, 31, 46, 0.5) 9%,
-    rgba(21, 31, 46, 1) 100px,
+    rgba(21, 31, 46, 0.5) 10%,
+    rgba(21, 31, 46, 1) 110px,
     rgba(21, 31, 46, 1) 100%
   );
   overflow: hidden;
