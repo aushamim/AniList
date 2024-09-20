@@ -1,4 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*╔═════════════════════════════════════════════════╗
     Main Page
@@ -8,6 +9,12 @@
   --background-image: url("https://media4.giphy.com/media/NzSUEgbTWB7TW/giphy.gif?cid=790b7611ec8f32a27c78dcb7e8300e9b30cd0b4149bd87e7&rid=giphy.gif");
   --transition-speed: 0.7s;
 }
+
+/* Roboto Condensed Font */
+/* body,
+.header-wrap, .list-stats {
+    font-family: "Roboto Condensed", sans-serif !important;
+} */
 
 /* Scrollbar */
 html,
@@ -148,6 +155,37 @@ body.site-theme-dark .activity-manga_list .wrap {
   width: 100px;
   filter: blur(3px);
   transition: var(--transition-speed);
+}
+
+/* Break activity title to new line */
+.status .title {
+  display: block;
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activity-anime_list .wrap:hover .status a,
+.activity-manga_list .wrap:hover .status a {
+  width: 300px;
+  transition: var(--transition-speed) ease-out;
+}
+
+/* Place score before activity title */
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.status .hohFeedScore {
+  order: 0;
+  margin-left: 5px;
+}
+
+.status .title {
+  order: 1;
 }
 
 /* Activity top left dropdown */
