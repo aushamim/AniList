@@ -95,6 +95,34 @@ body {
   padding-bottom: 2px;
 }
 
+/* Stats Footer */
+.list-stats .footer {
+  transform-origin: bottom right;
+  transform: rotate(-90deg) translateX(38px);
+  width: 128px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.list-stats .footer .milestone {
+  transform: rotate(90deg);
+  font-size: 0.8rem;
+}
+
+.list-stats .footer .milestone::after {
+  transform: rotate(-90deg) translateY(8px);
+  top: 50%;
+}
+
+body.site-theme-dark .list-stats .footer {
+  background: rgba(var(--color-foreground-grey), 0.5);
+}
+
+.list-stats .footer .progress {
+  height: 5px;
+}
+
 /* Display all status posts in full regardless of their length */
 .activity-text .text .markdown {
   max-height: unset !important;
