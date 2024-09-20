@@ -54,7 +54,7 @@ body {
 }
 
 /*╔═════════════════════════════════════════════════╗
-    Activities [Posts & Others]
+    Stats
   ╚═════════════════════════════════════════════════╝*/
 
 /* Stats */
@@ -122,6 +122,10 @@ body.site-theme-dark .list-stats .footer {
 .list-stats .footer .progress {
   height: 5px;
 }
+
+/*╔═════════════════════════════════════════════════╗
+    Activities [Posts & Others]
+  ╚═════════════════════════════════════════════════╝*/
 
 /* Display all status posts in full regardless of their length */
 .activity-text .text .markdown {
@@ -259,6 +263,10 @@ body.site-theme-dark .activity-manga_list .wrap {
 .activity-manga_list .el-dropdown:hover .fa-angle-down {
   animation: bounce 1s ease-in infinite;
 }
+
+/*╔═════════════════════════════════════════════════╗
+    Others (Left Side)
+  ╚═════════════════════════════════════════════════╝*/
 
 /* Subscribe/Unsubscribe button */
 .activity-entry .action:hover .fa-bell {
