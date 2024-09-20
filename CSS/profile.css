@@ -57,6 +57,44 @@ body {
     Activities [Posts & Others]
   ╚═════════════════════════════════════════════════╝*/
 
+/* Stats */
+.list-stats {
+  position: relative;
+}
+
+.list-stats .stats-wrap {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 15px;
+}
+
+.list-stats .stats-wrap .stat:nth-child(1) {
+  text-align: start;
+  grid-row: span 2;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-stats .stats-wrap .stat:nth-child(1) .value {
+  font-size: 5.5rem;
+  padding-bottom: 0;
+}
+
+.list-stats .stats-wrap .stat:nth-child(1) .label {
+  font-size: 1.5rem;
+}
+
+.list-stats .stats-wrap .stat:not(:nth-child(1)) {
+  text-align: start;
+}
+
+.list-stats .stats-wrap .stat:not(:nth-child(1)) .value {
+  padding-bottom: 2px;
+}
+
 /* Display all status posts in full regardless of their length */
 .activity-text .text .markdown {
   max-height: unset !important;
